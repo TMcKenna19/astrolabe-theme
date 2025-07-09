@@ -1,0 +1,229 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--alabaster);
+}
+
+/* Header */
+header {    
+    background: linear-gradient(180deg,rgb(57, 57, 57) 50%, rgb(88, 86, 85));
+    color: var(--alabaster);
+    width: 100%;
+    height: 10rem;
+    align-content: center;
+}
+
+/* Header nav-bar */
+header .top-bar {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+header .top-bar li a  {
+    font-size: 2rem;
+    color: var(--alabaster);
+    padding: .25rem 1rem;
+    text-decoration: none;
+}
+
+header .top-bar li:first-child a {
+    padding-left: 0;
+}
+
+/* Hero slider */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+  
+.swiper-slide {
+    position: relative;
+}
+  
+.swiper-slide img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+  
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+  
+.hero-nav {
+    display: flex;
+    justify-content: center;
+}
+  
+.nav-menu {
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-menu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--alabaster);
+}
+
+.hero-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 3rem;
+    font-size: 2rem;
+}
+
+/* Hero Slider Text */
+.hero-text {
+    text-align: center;
+    color: var(--alabaster);
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+.page-wrapper {
+    padding: 2rem 0;
+}
+
+/* Front-page content */
+.front-page-content {
+    color: var(--shadow);
+    text-align: center;
+}
+
+.secondary-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 15rem;
+    color: var(--alabaster);
+    /* background-color: var(--bark); */
+    background: linear-gradient(180deg,var(--bark) 2%, var(--timber));
+}
+
+/* Blog Category Menu */
+.blog-categories-menu{
+    /* background: linear-gradient(180deg,var(--bark) 2%, var(--timber)); */
+    background-color: var(--timber);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+}
+.category-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
+.category-card {
+    background: var(--kendalgreen);
+    /* border: 1px solid #ddd; */
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+  
+/* .category-card:hover {
+    transform: translateY(-5px);
+} */
+  
+.category-card a {
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+}
+  
+
+/* blog layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 15rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-body {
+    width: 460px;
+    height: 650px;
+    background-color: var(--alabaster);
+    text-align: center;
+}
+
+.card-body h4 {
+    padding: 2rem;
+}
+
+.excerpt {
+    padding-top: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: justify;
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+.card-body img {
+    width: 100%;
+    height: 300px;
+}
+
+.button {
+    color: #ffffff;
+    background-color: var(--shadow);
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    height: 100px;
+    color: var(--alabaster);
+    background-color: var(--shadow);
+}
+
+:root {
+    /* --yellow: #FFC300;
+    --orange: #E6460D;
+    --red: #BB0914;
+    --black: #22282D; */
+    --alabaster: #FCFFF8;
+    --pebble: #D5D0C8;
+    --driftwood: #B8AD9D;
+    --bark: #977F6B;
+    --timber: #674E3E;
+    --shadow: #261C18;
+    --pennywise: #A2583C;
+    --kendalgreen: #547767;
+}
