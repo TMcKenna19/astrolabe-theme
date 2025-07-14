@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-        speed: 1000
+        speed: 1200
     });
 });

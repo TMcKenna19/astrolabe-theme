@@ -108,44 +108,43 @@ header .top-bar li:first-child a {
     font-size: 1.3rem;
     width: 100%;
     height: 15rem;
-    color: var(--alabaster);
-    /* background-color: var(--bark); */
-    background: linear-gradient(180deg,var(--bark) 2%, var(--timber));
+    background-color: var(--pebble);
+    color: var(--shadow);
 }
 
 /* Blog Category Menu */
 .blog-categories-menu{
-    /* background: linear-gradient(180deg,var(--bark) 2%, var(--timber)); */
-    background-color: var(--timber);
+    background-color: var(--pebble);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15rem;
+    height: 35rem;
 }
 .category-nav-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
     max-width: 800px;
     margin: 0 auto;
 }
   
 .category-card {
     background: var(--kendalgreen);
-    /* border: 1px solid #ddd; */
-    padding: 30px;
+    border: 1px solid var(--driftwood);
+    padding: 5rem;
     text-align: center;
-    transition: transform 0.3s;
+    border-radius: 5%;
 }
   
-/* .category-card:hover {
-    transform: translateY(-5px);
-} */
+.category-card:hover {
+    background-color: var(--kendalgreenfade);
+}
   
 .category-card a {
     text-decoration: none;
-    color:#ffffff;
-    font-weight: bold;
+    color: var(--alabaster);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
 }
   
 
@@ -214,10 +213,6 @@ header .top-bar li:first-child a {
 }
 
 :root {
-    /* --yellow: #FFC300;
-    --orange: #E6460D;
-    --red: #BB0914;
-    --black: #22282D; */
     --alabaster: #FCFFF8;
     --pebble: #D5D0C8;
     --driftwood: #B8AD9D;
@@ -226,4 +221,5 @@ header .top-bar li:first-child a {
     --shadow: #261C18;
     --pennywise: #A2583C;
     --kendalgreen: #547767;
+    --kendalgreenfade: #547767e0;
 }
