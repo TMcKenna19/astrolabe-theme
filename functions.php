@@ -136,6 +136,9 @@ function mytheme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'mytheme_customize_register');
 
+// Secondary Text 
+add_post_type_support( 'page', 'custom-fields' );
+
 // Category Nav Menu
 function register_custom_menus() {
     register_nav_menus([
@@ -147,21 +150,32 @@ add_action('init', 'register_custom_menus');
 // Custom Walker class for category nav menu
 class Category_Menu_Card_Walker extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = null) {
-      // no submenu needed for 4-card grid
+        // No submenus needed
     }
-  
+
     function end_lvl(&$output, $depth = 0, $args = null) {
-      // no submenu
+        // No submenus
     }
-  
+
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-      $output .= '<div class="category-card">';
-      $output .= '<a href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
+        // Get ACF background image for this menu item
+        $background_image = get_field('background_image', $item);
+        $bg_style = '';
+
+        if ($background_image && isset($background_image['url'])) {
+            $bg_style = 'style="background-image: url(' . esc_url($background_image['url']) . ');"';
+        }
+
+        // Start anchor tag and assign .category-card class and background image style
+        $output .= '<a href="' . esc_url($item->url) . '" class="category-card" ' . $bg_style . '>';
+        $output .= '<span class="category-title">' . esc_html($item->title) . '</span>';
     }
-  
+
     function end_el(&$output, $item, $depth = 0, $args = null) {
-      $output .= '</div>';
+        // Close anchor tag
+        $output .= '</a>';
     }
-  }
+}
+
 ?>
 
