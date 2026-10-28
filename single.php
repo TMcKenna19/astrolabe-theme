@@ -11,7 +11,6 @@
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                     <div class="entry-meta">
                         <span class="posted-on">Posted on <?php echo get_the_date(); ?></span>
-                        <span class="byline"> by <?php the_author(); ?></span>
                     </div>
                 </div>
 
@@ -28,14 +27,7 @@
                     </div>
                 </footer>
             </article>
-
-            <?php
-            // Comments section
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-            ?>
-
+            
         <?php endwhile;
     else :
         echo '<p>No content found.</p>';
